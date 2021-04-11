@@ -215,7 +215,7 @@ function resetGame() {
 }
 
 function toggleModal(e){
-    if(e.target.className === 'close'){
+    if(e.target.classList[0] === 'close'){
         let body = document.querySelector('body')
         let pageWrap = document.createElement('div');
         pageWrap.classList = "page-wrap";
