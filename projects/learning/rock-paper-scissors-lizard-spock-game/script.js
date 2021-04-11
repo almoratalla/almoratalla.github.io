@@ -1,7 +1,6 @@
 import aiAnswer from "./hardmode.js";
 let MODE = 'normal';
 function init(){
-    console.log(MODE);
     createStartEvents();
     updateScore(null, MODE)
 }
@@ -9,7 +8,6 @@ function init(){
 
 function createStartEvents(){
     document.querySelectorAll('div.main>.controls button').forEach((controlButton,idx )=> {
-        console.log('created event listener', idx)
         controlButton.addEventListener('click', startGame.bind(this))
     }) 
 }
@@ -17,7 +15,6 @@ function createStartEvents(){
 let USER_OPTION;
 
 async function startGame(e) {
-    console.log(`${MODE}, mode`, MODE)
     let m = MODE;
 
     document.querySelector('#mode-toggle').disabled = true;
@@ -69,7 +66,6 @@ async function startGame(e) {
 function pickingResultsSection(u, c, m){
 
     // Render results section with picking
-    console.log(document.querySelector('.controls'))
     document.querySelector('.controls').remove();
 
     // render user choice
@@ -135,14 +131,12 @@ function pickingResultsSection(u, c, m){
         GAME_ERROR = new Error('Something went wrong with the game master');
     }
     let result = GAME_RESULT;
-    console.log(result)
 
     // render 
     
     const resultsPaneDiv = document.createElement('div');
     resultsPaneDiv.classList = "results-pane";
     const resultBannerHeadings2 = document.createElement('h2');
-    console.log(resultBannerHeadings2)
     resultBannerHeadings2.classList = "result-banner";
     resultBannerHeadings2.textContent = result.toString().toLowerCase().trim() !== "draw" ? `YOU ${result.toString().toUpperCase().trim()}`: "IT'S A TIE";
     const resetButton = document.createElement('button');
@@ -160,7 +154,6 @@ function pickingResultsSection(u, c, m){
         if (result === 'win'){
             updateScore('add', m, result)
         } else {
-            console.log('You loseee', m, result)
             updateScore('add', m, result)
         } 
     }, 3000);
@@ -313,37 +306,25 @@ init();
 function updateScore(op, m, r,prev, curr){
     prev = parseInt(document.querySelector('#score').textContent)
     if(!op){
-        console.log('triggered no operation')
         if(m !== "hard"){
-            console.log('triggered no operation normal')
             prev = window.localStorage.getItem('rps-score');
-            console.log(prev)
             document.querySelector('#score').textContent = prev ? prev: '0';
         } else {
-            console.log('triggered no operation hard')
             prev = window.localStorage.getItem('rps-hard-score');
-            console.log(prev, prev.split(","))
-            let [ yourScore, aiScore ] = prev.split(",")
-            console.log(yourScore, aiScore)
-            console.log(typeof yourScore)
-            document.querySelector('#score').textContent = prev ? yourScore: '0';
-            document.querySelector('#ai-score').textContent = aiScore;
-            console.log(document.querySelector('#ai-score'))
+            document.querySelector('#score').textContent = prev ? prev.split(",")[0]: '0';
+            document.querySelector('#ai-score').textContent = prev ? prev.split(",")[1]: '0';
         }
         
     }
 
-    console.log(op, m, r)
 
     if(op === 'add' && r === "win" && m !== "hard"){
-        console.log('TRIGGERED update score normal mode')
         document.querySelector('#score').textContent = parseInt(document.querySelector('#score').textContent) + 1;
         curr = document.querySelector('#score').textContent
         window.localStorage.setItem('rps-score', curr)
     }
     
     if(op === "add" && r === "win" && m === "hard"){
-        console.log('TRIGGERED update score hard mode')
         document.querySelector('#score').textContent = parseInt(document.querySelector('#score').textContent) + 1;
         curr = ['', '']
         curr[0] = document.querySelector('#score').textContent;
@@ -353,7 +334,6 @@ function updateScore(op, m, r,prev, curr){
 
 
     if(op === "add" && r === "lose" && m === "hard"){
-        console.log('TRIGGERED update score hard mode')
         document.querySelector('#ai-score').textContent = parseInt(document.querySelector('#ai-score').textContent) + 1;
         curr = ['', '']
         curr[0] = document.querySelector('#score').textContent;
