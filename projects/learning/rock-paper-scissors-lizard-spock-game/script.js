@@ -270,13 +270,13 @@ document.querySelector('#mode-toggle').addEventListener('click', (e) => {
         const aiScoreDiv = document.createElement('div');
         aiScoreDiv.classList = "ai-score";
         const aiScoreSpan = document.createElement('span');
-        aiScoreSpan.textContent = "THE HOUSE";
+        aiScoreSpan.textContent = "HOUSE";
         const aiScoreP = document.createElement('p');
         aiScoreP.id = "ai-score";
 
         
         const yourScoreHeadings4 = scoreHeadDiv.querySelector('.score h4');
-        yourScoreHeadings4.textContent = 'YOUR SCORE'
+        yourScoreHeadings4.textContent = 'YOU'
 
         aiScoreDiv.append(aiScoreSpan)
         aiScoreDiv.append(aiScoreP);
