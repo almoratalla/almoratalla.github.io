@@ -63,7 +63,6 @@ async function startGame(g, e) {
         // hard mode
     
         const cOption = await aiAnswer(uOption, g);
-        console.log(cOption)
         if (cOption == 1) {
             computerOption = 'rock';
         } else if (cOption == 2){
