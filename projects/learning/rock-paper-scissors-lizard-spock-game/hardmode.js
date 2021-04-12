@@ -1,10 +1,13 @@
-
 let pattern = [];
 let gameCount = 0;
+// let chosenByHuman= 0;
+// let chosenByAI= 0;
 let patternLength= 10
 
 function prepareData(userChoice) {
+  // console.log(pattern.length, pattern)
   if (pattern.length < 1) {
+      // console.log('weh')
       for (let index = 1; index <= patternLength; index++) {
       pattern.push(Math.floor(Math.random() * 3) + 1)
       }
