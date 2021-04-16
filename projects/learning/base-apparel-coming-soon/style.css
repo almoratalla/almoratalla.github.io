@@ -300,7 +300,7 @@ body .global-container .div__main-section form.error button {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) and (min-height: 800px) {
   body {
     width: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.918), rgba(255, 245, 245, 0.9), #f8bfbf);
@@ -484,4 +484,191 @@ body .global-container .div__main-section form.error button {
     cursor: pointer;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+@media only screen and (min-width: 900px) and (max-height: 800px) and (min-height: 550px) {
+  body {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.918), rgba(255, 245, 245, 0.9), #f8bfbf);
+  }
+  body .global-container {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    background-position: left center;
+  }
+  body .global-container header {
+    padding: 2em;
+    width: 60%;
+  }
+  body .global-container header div {
+    width: 27.875em;
+    margin: 0 auto;
+  }
+  body .global-container header div img {
+    margin: 1em 0;
+    height: 33px;
+  }
+  body .global-container .hero {
+    background-image: url("./images/hero-desktop.jpg");
+    width: 40%;
+    height: 100vh;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    position: absolute;
+    right: 0;
+  }
+  body .global-container .div__main-section {
+    padding: 2em 2em;
+    width: 60%;
+  }
+  body .global-container .div__main-section section {
+    max-width: 27.875em;
+    margin: 0 auto;
+  }
+  body .global-container .div__main-section section h1 {
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    word-spacing: 100vw;
+    margin: 0 auto;
+    font-size: 2.5em;
+    padding: 0;
+    line-height: 1.2em;
+  }
+  body .global-container .div__main-section p {
+    margin: 0.875em 0;
+    text-align: left;
+    font-weight: 400;
+    color: #ce9797;
+    max-width: 27.875em;
+    line-height: 2em;
+    -webkit-animation: slideleft 500ms ease-in-out forwards;
+            animation: slideleft 500ms ease-in-out forwards;
+    font-size: 1rem;
+  }
+  body .global-container .div__main-section form {
+    margin: 1em 0;
+    height: 3.5rem;
+    width: 100%;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: transparent;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    border: none;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-animation: slideright 500ms ease-in-out forwards;
+            animation: slideright 500ms ease-in-out forwards;
+    opacity: 0;
+    max-width: 27.875em;
+  }
+  body .global-container .div__main-section form label {
+    display: none;
+  }
+  body .global-container .div__main-section form input {
+    height: 3.5rem;
+    padding: 0 8.375rem 0 2em;
+    width: 100%;
+    background: transparent;
+    font: unset;
+    border-radius: 50px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  body .global-container .div__main-section form input::-webkit-input-placeholder {
+    color: #ce9797;
+  }
+  body .global-container .div__main-section form input:-ms-input-placeholder {
+    color: #ce9797;
+  }
+  body .global-container .div__main-section form input::-ms-input-placeholder {
+    color: #ce9797;
+  }
+  body .global-container .div__main-section form input::placeholder {
+    color: #ce9797;
+  }
+  body .global-container .div__main-section form input:focus {
+    border-width: 2px;
+    -webkit-box-shadow: 1px 2px 6px rgba(206, 151, 151, 0.16);
+            box-shadow: 1px 2px 6px rgba(206, 151, 151, 0.16);
+    outline: none;
+  }
+  body .global-container .div__main-section form input:required:invalid {
+    border: 2px solid #f96262;
+    outline: none;
+  }
+  body .global-container .div__main-section form img.img__error {
+    display: none;
+    position: absolute;
+    right: 7.875rem;
+  }
+  body .global-container .div__main-section form button {
+    outline: none;
+    position: absolute;
+    right: 0;
+    height: inherit;
+    width: 6.375rem;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  }
+  body .global-container .div__main-section form button img {
+    margin: auto;
+  }
+  body .global-container .div__main-section form button:hover {
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16), 0 10px 12px #ffd6d6;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16), 0 10px 12px #ffd6d6;
+    background: -webkit-gradient(linear, left top, right top, from(#ffd6d6), to(#f8bfbf));
+    background: linear-gradient(90deg, #ffd6d6, #f8bfbf);
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 100s ease-in forwards;
+    transition: 100s ease-in forwards;
+  }
+  body .global-container .div__main-section form small {
+    display: none;
+    position: absolute;
+    bottom: -3.5em;
+    margin: 1em 1.375em;
+    color: #f96262;
+    font-size: 0.7em;
+  }
+  body .global-container .div__main-section form.error input {
+    border: 2px solid #f96262;
+    outline: none;
+    padding-right: 10.375em;
+  }
+  body .global-container .div__main-section form.error small {
+    display: block;
+  }
+  body .global-container .div__main-section form.error img.img__error {
+    display: block;
+  }
+  body .global-container .div__main-section form.error button {
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16), 0 10px 12px #ffd6d6;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16), 0 10px 12px #ffd6d6;
+    background: #f8bfbf;
+    background: -webkit-gradient(linear, left top, right top, from(#ffd6d6), to(#f8bfbf));
+    background: linear-gradient(90deg, #ffd6d6, #f8bfbf);
+    border: none;
+    cursor: pointer;
+  }
+}
