@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="global-container">
+    <header>
+      <div>
+        <img src="./images/logo.svg" alt="Base Apparel">
+      </div>
+    </header>
+    <div class="hero"></div>
+    <div class="div__main-section">
+      <main>
+        <section>
+          <h1><span>We're</span> coming soon</h1>
+          <p>Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+            <form action="/">
+              <label for="input--email">Email Address</label>
+              <input type="email" name="email" id="input--email" placeholder="Email Address" autocomplete="email">
+              <img class="img__error" src="./images/icon-error.svg" alt="error">
+              <button type="submit">
+                <img src="./images/icon-arrow.svg" alt="submit">
+              </button>
+              <small>Please provide a valid email</small>
+            </form>
+        </section>
+      </main>
+    </div>
+  </div>
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. <br>
+      Coded by <a href="https://github.com/almoratalla"  target="_blank" rel="noopener noreferrer">Alain Moratalla</a>.
+    </p>
+  </footer> -->
+  <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">For all the ricks</a> -->
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(e.currentTarget.querySelector('input[type="email"]').value.toString().trim())) {
+            form.classList = ''; // or remove/toggle
+            //////////////////////////////////////////////////////////////////////////
+            //  ( ͡° ͜ʖ ͡°)
+            // document.querySelector('a').click()                                  //
+            window.location.href = 'https://youtu.be/dQw4w9WgXcQ';// 
+            //////////////////////////////////////////////////////////////////////////
+            // Or fetch if connected to a backend api
+            // form.submit();  // use the fetch api/axios or your preferred http client for the browser
+        } else {
+            form.classList = 'error'; // or add/toggle
+        }
+    })
+  </script>
+</body>
+</html>
