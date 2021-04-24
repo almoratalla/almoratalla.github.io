@@ -52,6 +52,7 @@ body{
             background-size: contain;
             background-position: bottom right;
             // background-attachment: fixed;
+            position: relative;
 
             .container__header{
                 header{
@@ -175,6 +176,22 @@ body{
                     background-attachment: fixed;
                 }
             }
+
+            
+        }
+
+        .container__landing::after {
+            content: '';
+            background: transparent;
+            width: 35rem;
+            height: 35rem;
+            position: absolute;
+            right: 15rem;
+            top: 15rem;
+            background-image: url('../images/svg/_k/SVG/k_pengset2.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            // background-position: bottom right;
         }
         
     }
